@@ -1,0 +1,162 @@
+# TYSM
+
+**AI-Powered Restaurant Phone Order Assistant**
+
+TYSM transforms messy phone orders into clean, structured order tickets. Built to showcase practical LLM integration for small businesses, this app demonstrates how AI can streamline restaurant operations and reduce order errors.
+
+![OrderEase AI Screenshot](https://img.shields.io/badge/React-19.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-blue)
+
+## ✨ Features
+
+- 🎤 **Voice Input**: Use browser speech recognition to record phone orders
+- 💬 **Text Input**: Type orders manually for testing or when voice isn't available
+- 🧠 **AI Parsing**: GPT-4 extracts items, quantities, sizes, and modifications
+- 💰 **Auto-Calculation**: Automatic price calculation with tax
+- ⚠️ **Ambiguity Detection**: Flags unclear items that need clarification
+- 💡 **Smart Upselling**: AI suggests complementary items customers didn't order
+- 📋 **Readback Script**: Generates confirmation dialogue for order accuracy
+- 🎨 **Clean UI**: Modern, responsive design with Tailwind CSS
+
+## 🚀 Tech Stack
+
+- **Frontend**: React 19 + TypeScript
+- **Styling**: Tailwind CSS
+- **AI**: OpenAI GPT-4o-mini
+- **Build Tool**: Vite
+- **Speech Recognition**: Web Speech API
+
+## 📦 Installation
+
+1. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables**:
+   Create a `.env` file in the root directory:
+
+   ```env
+   VITE_OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+   Get your API key from: https://platform.openai.com/api-keys
+
+3. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**:
+   Navigate to `http://localhost:5173`
+
+## 🎯 Usage
+
+### Try It Out
+
+1. Click one of the **sample orders** to populate the input field
+2. Or **type your own** order in natural language
+3. Or click **"🎤 Record Order"** to use voice input (Chrome/Edge recommended)
+4. Click **"✨ Parse Order"** to process with AI
+5. Review the structured output with:
+   - Itemized order breakdown
+   - Price calculation
+   - Customer info (if provided)
+   - Ambiguities to clarify
+   - Upsell suggestions
+   - Confirmation script
+
+### Example Orders
+
+**Simple Order:**
+
+```
+Hi, I'd like two large pepperoni pizzas and a medium Coke.
+```
+
+**Complex Order:**
+
+```
+Yeah, can I get a large supreme pizza, no onions, extra cheese,
+well done, an order of buffalo wings with medium sauce,
+garlic breadsticks with extra marinara, and a large lemonade?
+Oh, and my name is Brian, phone number is 555-1234.
+```
+
+## 🗂️ Project Structure
+
+```
+src/
+├── App.tsx                 # Main application component
+├── OrderInput.tsx          # Input component with voice/text entry
+├── OrderDisplay.tsx        # Displays parsed order results
+├── types.ts                # TypeScript type definitions
+├── menuData.ts             # Restaurant menu and pricing data
+├── openaiService.ts        # OpenAI API integration
+├── utils.ts                # Helper functions (calculations, scripts)
+└── index.css               # Tailwind CSS imports
+```
+
+## 🧠 How It Works
+
+1. **Input**: User records or types a phone order
+2. **AI Processing**:
+   - Sends order transcript to GPT-4 with menu context
+   - AI extracts structured data (items, quantities, mods)
+   - Detects ambiguities and suggests upsells
+3. **Calculation**: Prices each item based on menu data + tax
+4. **Output**: Displays order ticket + confirmation script
+
+## 🔧 Customization
+
+### Update the Menu
+
+Edit `src/menuData.ts` to customize:
+
+- Menu items and categories
+- Pricing (base prices and sizes)
+- Available customizations
+- Tax rate
+
+### Change AI Model
+
+In `src/openaiService.ts`, modify:
+
+```typescript
+model: "gpt-4o-mini"; // or 'gpt-4o', 'gpt-3.5-turbo'
+```
+
+### Styling
+
+All styles use Tailwind CSS utility classes. Customize colors and theme in `tailwind.config.js`.
+
+## 🎨 Why This Project?
+
+This project was built as a **portfolio piece** to demonstrate:
+
+- ✅ **Practical LLM Integration**: Real-world AI application, not just a chatbot
+- ✅ **Full-Stack Skills**: React, TypeScript, API integration, state management
+- ✅ **Product Thinking**: Solving actual pain points for small businesses
+- ✅ **Clean Code**: Type-safe, well-structured, maintainable
+- ✅ **UI/UX Design**: Thoughtful, user-friendly interface
+
+Built by **Brian Sostek** - Software Developer @ Epic Systems
+
+## 📝 License
+
+MIT License - feel free to use this project for learning or inspiration!
+
+## 🚧 Future Enhancements
+
+- [ ] Backend API to secure OpenAI key
+- [ ] Multi-language support (Spanish, etc.)
+- [ ] Order history and analytics dashboard
+- [ ] Export orders to POS systems
+- [ ] Dietary restrictions detection
+- [ ] Integration with delivery APIs
+- [ ] Admin panel for menu management
+
+---
+
+_Built with [Vite](https://vitejs.dev/), styled with [Tailwind CSS](https://tailwindcss.com/), powered by [OpenAI](https://openai.com/)_

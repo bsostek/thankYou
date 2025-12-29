@@ -1,0 +1,358 @@
+import type { MenuItem } from "./types";
+
+export const MENU_DATA: MenuItem[] = [
+  // Pizzas
+  {
+    id: "pizza-pepperoni",
+    name: "Pepperoni Pizza",
+    category: "pizza",
+    basePrice: 0,
+    sizes: {
+      small: 10.99,
+      medium: 14.99,
+      large: 18.99,
+    },
+    customizations: [
+      "extra cheese",
+      "no cheese",
+      "extra pepperoni",
+      "light sauce",
+      "well done",
+      "extra sauce",
+    ],
+  },
+  {
+    id: "pizza-margherita",
+    name: "Margherita Pizza",
+    category: "pizza",
+    basePrice: 0,
+    sizes: {
+      small: 9.99,
+      medium: 13.99,
+      large: 17.99,
+    },
+    customizations: [
+      "extra cheese",
+      "no cheese",
+      "fresh basil",
+      "light sauce",
+      "well done",
+    ],
+  },
+  {
+    id: "pizza-supreme",
+    name: "Supreme Pizza",
+    category: "pizza",
+    basePrice: 0,
+    sizes: {
+      small: 12.99,
+      medium: 16.99,
+      large: 20.99,
+    },
+    customizations: [
+      "no mushrooms",
+      "no peppers",
+      "no onions",
+      "extra cheese",
+      "well done",
+    ],
+  },
+  {
+    id: "pizza-veggie",
+    name: "Veggie Pizza",
+    category: "pizza",
+    basePrice: 0,
+    sizes: {
+      small: 11.99,
+      medium: 15.99,
+      large: 19.99,
+    },
+    customizations: [
+      "no mushrooms",
+      "no peppers",
+      "no onions",
+      "extra cheese",
+      "add olives",
+    ],
+  },
+
+  // Appetizers
+  {
+    id: "app-wings",
+    name: "Buffalo Wings",
+    category: "appetizer",
+    basePrice: 9.99,
+    customizations: [
+      "mild",
+      "medium",
+      "hot",
+      "BBQ",
+      "honey mustard",
+      "ranch dressing",
+      "blue cheese dressing",
+    ],
+  },
+  {
+    id: "app-breadsticks",
+    name: "Garlic Breadsticks",
+    category: "appetizer",
+    basePrice: 5.99,
+    customizations: ["extra garlic", "marinara sauce", "cheese sauce"],
+  },
+  {
+    id: "app-mozzarella",
+    name: "Mozzarella Sticks",
+    category: "appetizer",
+    basePrice: 7.99,
+    customizations: ["marinara sauce", "ranch dressing"],
+  },
+
+  // Drinks
+  {
+    id: "drink-soda",
+    name: "Soft Drink",
+    category: "drink",
+    basePrice: 0,
+    sizes: {
+      small: 1.99,
+      medium: 2.49,
+      large: 2.99,
+    },
+    customizations: [
+      "Coke",
+      "Sprite",
+      "Fanta",
+      "Dr Pepper",
+      "Root Beer",
+      "no ice",
+      "extra ice",
+    ],
+  },
+  {
+    id: "drink-water",
+    name: "Bottled Water",
+    category: "drink",
+    basePrice: 1.49,
+  },
+  {
+    id: "drink-lemonade",
+    name: "Lemonade",
+    category: "drink",
+    basePrice: 0,
+    sizes: {
+      small: 2.49,
+      medium: 2.99,
+      large: 3.49,
+    },
+  },
+
+  // Desserts
+  {
+    id: "dessert-brownie",
+    name: "Chocolate Brownie",
+    category: "dessert",
+    basePrice: 4.99,
+    customizations: ["a la mode", "extra fudge"],
+  },
+  {
+    id: "dessert-cookies",
+    name: "Chocolate Chip Cookies",
+    category: "dessert",
+    basePrice: 3.99,
+  },
+
+  // Chinese Cuisine
+  {
+    id: "chinese-general-tso",
+    name: "General Tso's Chicken",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 10.99,
+      medium: 13.99,
+      large: 16.99,
+    },
+    customizations: [
+      "extra spicy",
+      "mild",
+      "no broccoli",
+      "brown rice",
+      "white rice",
+      "fried rice",
+    ],
+  },
+  {
+    id: "chinese-orange-chicken",
+    name: "Orange Chicken",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 10.99,
+      medium: 13.99,
+      large: 16.99,
+    },
+    customizations: [
+      "extra spicy",
+      "mild",
+      "brown rice",
+      "white rice",
+      "fried rice",
+    ],
+  },
+  {
+    id: "chinese-kung-pao",
+    name: "Kung Pao Chicken",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 11.99,
+      medium: 14.99,
+      large: 17.99,
+    },
+    customizations: [
+      "extra spicy",
+      "mild",
+      "no peanuts",
+      "brown rice",
+      "white rice",
+    ],
+  },
+  {
+    id: "chinese-beef-broccoli",
+    name: "Beef and Broccoli",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 11.99,
+      medium: 14.99,
+      large: 17.99,
+    },
+    customizations: [
+      "extra broccoli",
+      "no broccoli",
+      "brown rice",
+      "white rice",
+    ],
+  },
+  {
+    id: "chinese-lo-mein",
+    name: "Lo Mein",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 9.99,
+      medium: 12.99,
+      large: 15.99,
+    },
+    customizations: [
+      "chicken",
+      "beef",
+      "shrimp",
+      "vegetable",
+      "pork",
+      "extra vegetables",
+    ],
+  },
+  {
+    id: "chinese-fried-rice",
+    name: "Fried Rice",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 8.99,
+      medium: 11.99,
+      large: 14.99,
+    },
+    customizations: [
+      "chicken",
+      "beef",
+      "shrimp",
+      "vegetable",
+      "pork",
+      "no egg",
+      "extra egg",
+    ],
+  },
+  {
+    id: "chinese-sweet-sour",
+    name: "Sweet and Sour Chicken",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 10.99,
+      medium: 13.99,
+      large: 16.99,
+    },
+    customizations: [
+      "extra sauce",
+      "light sauce",
+      "brown rice",
+      "white rice",
+      "fried rice",
+    ],
+  },
+  {
+    id: "chinese-mongolian-beef",
+    name: "Mongolian Beef",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 12.99,
+      medium: 15.99,
+      large: 18.99,
+    },
+    customizations: [
+      "extra spicy",
+      "mild",
+      "extra onions",
+      "brown rice",
+      "white rice",
+    ],
+  },
+  {
+    id: "chinese-egg-rolls",
+    name: "Egg Rolls",
+    category: "chinese",
+    basePrice: 4.99,
+    customizations: ["sweet and sour sauce", "hot mustard", "duck sauce"],
+  },
+  {
+    id: "chinese-spring-rolls",
+    name: "Spring Rolls",
+    category: "chinese",
+    basePrice: 5.99,
+    customizations: ["peanut sauce", "sweet chili sauce"],
+  },
+  {
+    id: "chinese-dumplings",
+    name: "Pork Dumplings",
+    category: "chinese",
+    basePrice: 6.99,
+    customizations: ["steamed", "fried", "soy sauce", "vinegar sauce"],
+  },
+  {
+    id: "chinese-wonton-soup",
+    name: "Wonton Soup",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 4.99,
+      medium: 6.99,
+      large: 8.99,
+    },
+  },
+  {
+    id: "chinese-hot-sour-soup",
+    name: "Hot and Sour Soup",
+    category: "chinese",
+    basePrice: 0,
+    sizes: {
+      small: 4.99,
+      medium: 6.99,
+      large: 8.99,
+    },
+    customizations: ["extra spicy", "mild"],
+  },
+];
+
+export const TAX_RATE = 0.08; // 8% tax
