@@ -23,7 +23,7 @@ TYSM transforms messy phone orders into clean, structured order tickets. Built t
 
 - **Frontend**: React 19 + TypeScript
 - **Styling**: Tailwind CSS
-- **AI**: OpenAI GPT-4o-mini
+- **AI**: Gemini
 - **Build Tool**: Vite
 - **Speech Recognition**: Web Speech API
 
